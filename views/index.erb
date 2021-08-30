@@ -7,6 +7,11 @@
 </head>
 <body>
 	<div class="large">
+		<!-- 見出し -->
+		<form action="/title" method="post">
+			<input type="text" value="title" placehold="見出し">
+			<button type="submit" value="送信">更新</button>
+		</form>
 		<h1><%= @number %></h1>
 		<form action="/plus" method="post">
 			<input type="submit" value="+">
@@ -24,8 +29,24 @@
 			<input type="submit" value="clear">
 		</form>
 	</div>
+	<!-- -->
 	<div class="large">
 		<h1><%= @number2 %></h1>
+		<form action="/plus2" method="post">
+			<input type="submit" value="+">
+		</form>
+		<form action="/minus2" method="post">
+			<input type="submit" value="-">
+		</form>
+		<form action="/double2" method="post">
+			<input type="submit" value="×2">
+		</form>
+		<form action="/divide2" method="post">
+			<input type="submit" value="÷2">
+		</form>
+		<form action="/clear2" method="post">
+			<input type="submit" value="clear">
+		</form>
 	</div>
 </body>
 </html>
