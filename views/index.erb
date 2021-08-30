@@ -6,21 +6,26 @@
 	<link rel="stylesheet" href="/assets/css/count.css">
 </head>
 <body>
-	<h1><%= @number %></h1>
-	<form action="/plus" method="post">
-		<input type="submit" value="+">
-	</form>
-	<form action="/minus" method="post">
-		<input type="submit" value="-">
-	</form>
-	<form action="/double" method="post">
-		<input type="submit" value="×2">
-	</form>
-	<form action="/divide" method="post">
-		<input type="submit" value="÷2">
-	</form>
-	<form action="/clear" method="post">
-		<input type="submit" value="clear">
-	</form>
+	<div class="large">
+		<h1><%= @number %></h1>
+		<form action="/plus" method="post">
+			<input type="submit" value="+">
+		</form>
+		<form action="/minus" method="post">
+			<input type="submit" value="-">
+		</form>
+		<form action="/double" method="post">
+			<input type="submit" value="×2">
+		</form>
+		<form action="/divide" method="post">
+			<input type="submit" value="÷2">
+		</form>
+		<form action="/clear" method="post">
+			<input type="submit" value="clear">
+		</form>
+	</div>
+	<div class="large">
+		<h1><%= @number2 %></h1>
+	</div>
 </body>
 </html>

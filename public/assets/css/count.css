@@ -84,3 +84,7 @@ input[value="clear"]{
     color: #f9f9f9;
     background: #95FD94;
 }
+
+.large{
+    margin-bottom: 100px;
+}

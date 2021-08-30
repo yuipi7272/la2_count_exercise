@@ -6,12 +6,14 @@ require './models.rb'
 before do
   if Count.count == 0
     Count.create(number: 0)
+    Count.create(number: 0)
   end
 end
 
 get '/' do
   count = Count.find(1)
   @number = count.number
+  @number2 = count.number
   erb :index
 end
 
