@@ -66,3 +66,21 @@ input[value="-"]{
     color: #f9f9f9;
     background: #F44336;
 }
+
+/* かけるボタン */
+input[value="×2"]{
+    color: #f9f9f9;
+    background: #81F437;
+}
+
+/* 割るボタン */
+input[value="÷2"]{
+    color: #f9f9f9;
+    background: #F4E636;
+}
+
+/* クリアボタン */
+input[value="clear"]{
+    color: #f9f9f9;
+    background: #95FD94;
+}
