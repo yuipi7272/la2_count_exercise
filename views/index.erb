@@ -6,48 +6,31 @@
 	<link rel="stylesheet" href="/assets/css/count.css">
 </head>
 <body>
+	<!-- 見出し -->
+	<form action="/create" method="post">
+		<input type="text" name="title" placeholder="見出し">
+		<button type="submit" value="送信">更新</button>
+	</form>
 	<div class="large">
-		<!-- 見出し -->
-		<h2><%= @title %></h2>
-		<form action="/title" method="post">
-			<input type="text" name="title" placeholder="見出し">
-			<button type="submit" value="送信">更新</button>
-		</form>
-		<h1><%= @number %></h1>
-		<form action="/plus" method="post">
+		<% @counts.each do |count| %>
+		<h2><%= count.title %></h2>
+		<h1><%= count.number %></h1>
+		<form action="/plus/<%= count.id %>" method="post">
 			<input type="submit" value="+">
 		</form>
-		<form action="/minus" method="post">
+		<form action="/minus/<%= count.id %>" method="post">
 			<input type="submit" value="-">
 		</form>
-		<form action="/double" method="post">
+		<form action="/double/<%= count.id %>" method="post">
 			<input type="submit" value="×2">
 		</form>
-		<form action="/divide" method="post">
+		<form action="/divide/<%= count.id %>" method="post">
 			<input type="submit" value="÷2">
 		</form>
-		<form action="/clear" method="post">
+		<form action="/clear/<%= count.id %>" method="post">
 			<input type="submit" value="clear">
 		</form>
-	</div>
-	<!-- -->
-	<div class="large">
-		<h1><%= @number2 %></h1>
-		<form action="/plus2" method="post">
-			<input type="submit" value="+">
-		</form>
-		<form action="/minus2" method="post">
-			<input type="submit" value="-">
-		</form>
-		<form action="/double2" method="post">
-			<input type="submit" value="×2">
-		</form>
-		<form action="/divide2" method="post">
-			<input type="submit" value="÷2">
-		</form>
-		<form action="/clear2" method="post">
-			<input type="submit" value="clear">
-		</form>
+		<% end %>
 	</div>
 </body>
 </html>
