@@ -13,9 +13,19 @@ end
 get '/' do
   count = Count.find(1)
   @number = count.number
+  @title = count.title
+  
   count = Count.find(2)
   @number2 = count.number
+  @title2 = count.title
   erb :index
+end
+
+post '/title' do
+  count = Count.find(1)
+  count.title = params[:title]
+  count.save
+  redirect '/'
 end
 
 post '/plus' do

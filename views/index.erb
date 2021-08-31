@@ -8,8 +8,9 @@
 <body>
 	<div class="large">
 		<!-- 見出し -->
+		<h2><%= @title %></h2>
 		<form action="/title" method="post">
-			<input type="text" value="title" placehold="見出し">
+			<input type="text" name="title" placeholder="見出し">
 			<button type="submit" value="送信">更新</button>
 		</form>
 		<h1><%= @number %></h1>

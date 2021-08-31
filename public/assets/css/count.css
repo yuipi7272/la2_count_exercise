@@ -34,6 +34,11 @@ h1{
     border-radius: 50%;
 }
 
+/* 見出し */
+h2{
+    text-align: center;
+}
+
 /* ボタン共通 */
 input{
     border: 0;
@@ -52,7 +57,7 @@ input{
 }
 
 .large{
-    margin-bottom: 100px;
+    margin: 50px;
 }
 
 /* プラスボタン */
